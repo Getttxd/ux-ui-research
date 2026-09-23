@@ -95,7 +95,7 @@ export default function PromotionB({
   return (
     <div className={isOverlay 
       ? "w-full h-full bg-white flex flex-col relative overflow-hidden text-slate-900 select-none"
-      : "w-full sm:max-w-[420px] mx-auto bg-white min-h-screen sm:min-h-[880px] sm:max-h-[920px] sm:rounded-[44px] sm:shadow-2xl sm:border-[8px] sm:border-slate-800 flex flex-col relative overflow-hidden text-slate-900 select-none"
+      : "w-full sm:w-[420px] sm:max-w-[420px] sm:h-[920px] sm:min-h-[920px] sm:max-h-[920px] mx-auto bg-white min-h-screen sm:rounded-[44px] sm:shadow-2xl sm:border-[8px] sm:border-slate-800 flex flex-col relative overflow-hidden text-slate-900 select-none"
     }>
       
       {/* iOS Style Status Bar */}

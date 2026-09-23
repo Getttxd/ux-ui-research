@@ -34,7 +34,7 @@ export default function DemoAppB({
       {/* Main Container: Mobile Frame */}
       <main className="flex-1 p-0 sm:py-8 sm:px-4 flex items-center justify-center max-w-6xl mx-auto w-full">
         {/* The Mobile Phone */}
-        <div className="w-full sm:w-auto sm:max-w-[420px] sm:shrink-0 flex justify-center">
+        <div className="w-full sm:w-[420px] sm:shrink-0 flex justify-center">
           <HomeB 
             onSelectRestaurant={(res) => setSelectedRestaurant(res)} 
             onConfirmOrder={onConfirmOrder}
