@@ -126,7 +126,10 @@ export default function Home({ onSelectApp }) {
             {/* Launch Button A */}
             <button
               id="start-demo-a-btn"
-              onClick={() => onSelectApp('appA')}
+              onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                onSelectApp('appA')
+              }}
               className="relative z-10 w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 transition-all duration-200 flex items-center justify-center gap-2 group/btn cursor-pointer active:scale-[0.99]"
             >
               <span>เข้าใช้งานแอปพลิเคชันแบบ A</span>
@@ -184,7 +187,10 @@ export default function Home({ onSelectApp }) {
             {/* Launch Button B */}
             <button
               id="start-demo-b-btn"
-              onClick={() => onSelectApp('appB')}
+              onClick={() => {
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+                onSelectApp('appB')
+              }}
               className="relative z-10 w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-base shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-200 flex items-center justify-center gap-2 group/btn cursor-pointer active:scale-[0.99]"
             >
               <span>เข้าใช้งานแอปพลิเคชันแบบ B</span>

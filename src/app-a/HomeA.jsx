@@ -154,6 +154,14 @@ export default function HomeA({ onSelectRestaurant, onConfirmOrder }) {
   const [cart, setCart] = useState([])
   const [deliveryType, setDeliveryType] = useState('delivery') // 'delivery' | 'pickup' | 'dinein'
   const [activeTab, setActiveTab] = useState('home')
+  const scrollContainerRef = React.useRef(null)
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0
+    }
+  }, [])
 
   if (isOrderStatusOpen) {
     return (
@@ -252,7 +260,7 @@ export default function HomeA({ onSelectRestaurant, onConfirmOrder }) {
       </div>
 
       {/* Scrollable Container */}
-      <div className={`flex-1 overflow-y-auto ${cart.length > 0 ? 'pb-36' : 'pb-24'} px-4 scrollbar-none`}>
+      <div ref={scrollContainerRef} className={`flex-1 overflow-y-auto ${cart.length > 0 ? 'pb-36' : 'pb-24'} px-4 scrollbar-none`}>
         
         {/* Top Header: Address & Icons */}
         <div className="pt-1 pb-3 flex items-center justify-between">
